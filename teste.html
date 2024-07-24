@@ -55,6 +55,7 @@
             width: calc(100% - 40px); /* Largura fixa para os botões com margem de segurança */
             max-width: 320px; /* Largura máxima para os botões */
             border: 2px solid #022648; /* Adicionar borda */
+            box-sizing: border-box;
         }
         .button img {
             margin-right: 20px; /* Aumentar a distância entre o ícone e o texto */
@@ -67,7 +68,7 @@
         }
         .button span {
             display: inline-block;
-            margin-left: 20px; /* Adicionar margem para alinhar o texto */
+            vertical-align: middle; /* Alinhar verticalmente */
         }
         @media (min-width: 768px) {
             .logo {
