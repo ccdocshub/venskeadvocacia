@@ -2,9 +2,11 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Venske Advocacia</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap');
+
         body, html {
             margin: 0;
             padding: 0;
@@ -12,27 +14,63 @@
             height: 100%;
             display: flex;
             justify-content: center;
-            align-items: center;
-            background-color: #f5f5f5;
+            align-items: flex-start;
+            background-color: #022648; /* Cor de fundo do PDF */
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            text-align: center;
+            box-sizing: border-box;
+            overflow: hidden; /* Esconder overflow para evitar rolagem */
+            position: relative; /* Necessário para posicionar a imagem de fundo */
         }
-        .pdf-container {
-            width: 100%;
-            height: 100%;
+        .container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            overflow: hidden;
+            width: 90%; /* Ajustar à largura da tela com bordas laterais */
+            max-width: 500px; /* Largura máxima */
+            padding-top: 30px; /* Margem de segurança do topo */
+            box-sizing: border-box;
+            z-index: 2; /* Garantir que o conteúdo fique acima da imagem de fundo */
         }
-        iframe {
+        .logo {
             width: 100%;
-            height: 100%;
-            border: none;
+            max-width: 300px; /* Largura máxima */
+            margin-bottom: 20px; /* Distância entre o logo e a descrição */
+        }
+        .description-img {
+            width: 100%;
+            max-width: 320px; /* Largura máxima */
+            margin-bottom: 20px; /* Distância entre a descrição e o primeiro botão */
+        }
+        .button-img {
+            width: 100%;
+            max-width: 320px; /* Largura máxima */
+            margin: 10px 0; /* Margem entre os botões */
+        }
+        .background-logo {
+            position: absolute;
+            bottom: 0;
+            right: 0; /* Posicionar no canto direito */
+            width: 50%; /* Ajustar largura conforme necessário */
+            z-index: 1; /* Coloca a imagem atrás do conteúdo */
         }
     </style>
 </head>
 <body>
-    <div class="pdf-container">
-        <iframe src="https://drive.google.com/file/d/1tbRg-DNe3tY3jKLSPtf7B8I4IG4-pf4q/preview?embedded=true" allowfullscreen></iframe>
+    <div class="container">
+        <img src="logo.png" alt="Venske Advocacia" class="logo">
+        <img src="description.png" alt="Descrição" class="description-img">
+        <a href="https://wa.me/5512997359102" target="_blank">
+            <img src="whatsapp-button.png" alt="Chame no WhatsApp" class="button-img">
+        </a>
+        <a href="https://instagram.com/venskeadvocacia" target="_blank">
+            <img src="instagram-button.png" alt="Siga-nos no Instagram" class="button-img">
+        </a>
+        <a href="tel:+5512997359102">
+            <img src="phone-button.png" alt="Ligue para Nós" class="button-img">
+        </a>
     </div>
+    <img src="background-logo.png" alt="Logo de Fundo" class="background-logo">
 </body>
 </html>
