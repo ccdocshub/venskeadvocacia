@@ -19,6 +19,7 @@
             color: #fff;
             font-family: 'Plus Jakarta Sans', sans-serif;
             text-align: center;
+            padding: 20px;
         }
         .container {
             display: flex;
@@ -26,15 +27,16 @@
             align-items: center;
             padding: 20px;
             margin-top: 20px; /* Margem de segurança do topo */
+            max-width: 500px; /* Largura máxima */
+            width: 100%; /* Ajustar à largura da tela */
         }
         .logo {
             margin-top: 20px;
-            width: 200px;
+            width: 240px; /* Aumentar o tamanho do logotipo em 20% */
         }
         .description {
-            font-size: 20px;
+            font-size: 14px; /* Diminuir a descrição em 30% */
             margin: 20px 0;
-            max-width: 500px;
         }
         .button {
             padding: 15px 30px;
@@ -55,7 +57,10 @@
         }
         @media (min-width: 768px) {
             .logo {
-                width: 300px;
+                width: 360px; /* Aumentar o tamanho do logotipo em 20% */
+            }
+            .description {
+                font-size: 18px; /* Ajustar o tamanho da descrição para telas maiores */
             }
             .button {
                 font-size: 24px;
@@ -82,3 +87,4 @@
     </div>
 </body>
 </html>
+
