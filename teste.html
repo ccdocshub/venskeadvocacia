@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Venske Advocacia</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700&display=swap');
@@ -20,15 +20,17 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             text-align: center;
             padding: 20px;
+            box-sizing: border-box;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 20px;
-            margin-top: 20px; /* Margem de segurança do topo */
-            max-width: 500px; /* Largura máxima */
+            margin-top: 16px; /* Reduzir margem de segurança do topo em 20% */
+            max-width: 100%; /* Ajustar a largura máxima para 100% */
             width: 100%; /* Ajustar à largura da tela */
+            box-sizing: border-box;
         }
         .logo {
             margin-top: 20px;
@@ -45,14 +47,15 @@
             background-color: #F2E5D2; /* Cor do botão */
             color: #022648; /* Cor da fonte */
             text-decoration: none;
-            border-radius: 45px;
+            border-radius: 60px; /* Arredondar mais os botões */
             font-size: 18px;
             font-weight: bold;
             margin: 10px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 320px; /* Largura fixa para os botões */
+            width: calc(100% - 40px); /* Largura fixa para os botões com margem de segurança */
+            max-width: 320px; /* Largura máxima para os botões */
             border: 2px solid #022648; /* Adicionar borda */
             text-align: center; /* Garantir centralização do texto */
         }
@@ -101,4 +104,3 @@
     </div>
 </body>
 </html>
-
