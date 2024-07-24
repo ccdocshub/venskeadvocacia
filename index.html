@@ -29,25 +29,32 @@
             height: 100vh;
             border: none;
         }
-        .open-pdf {
+        .button {
             position: absolute;
-            top: 10px;
-            right: 10px;
+            bottom: 20px;
+            padding: 10px 20px;
             background: #000;
             color: #fff;
-            padding: 10px 15px;
             text-decoration: none;
             border-radius: 5px;
-            z-index: 1000; /* Ensure the button is above the iframe */
+            margin: 0 10px;
+        }
+        .button:nth-child(1) {
+            left: 20px;
+        }
+        .button:nth-child(2) {
+            left: 150px;
+        }
+        .button:nth-child(3) {
+            left: 280px;
         }
     </style>
 </head>
 <body>
     <div class="pdf-container">
         <iframe src="https://drive.google.com/file/d/1jRMN_y-98YYHE79ooyEMjRtx2lfQnaeX/preview?embedded=true" allow="fullscreen"></iframe>
-        <a href="https://drive.google.com/file/d/1jRMN_y-98YYHE79ooyEMjRtx2lfQnaeX/view" target="_blank" class="open-pdf">Abrir em nova aba</a>
     </div>
-    <div class="buttons-container" style="position: absolute; bottom: 20px; left: 20px;">
+    <div class="buttons-container">
         <a href="https://link-do-primeiro-botao" target="_blank" class="button">Primeiro Botão</a>
         <a href="https://link-do-segundo-botao" target="_blank" class="button">Segundo Botão</a>
         <a href="https://link-do-terceiro-botao" class="button">Terceiro Botão</a>
