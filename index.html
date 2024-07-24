@@ -22,6 +22,7 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            position: relative;
         }
         iframe {
             width: 100vw;
@@ -34,5 +35,16 @@
     <div class="pdf-container">
         <iframe src="https://drive.google.com/file/d/1jRMN_y-98YYHE79ooyEMjRtx2lfQnaeX/preview?embedded=true" allow="fullscreen"></iframe>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const telLink = document.querySelector('a[href^="tel:"]');
+            if (telLink) {
+                telLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    window.location.href = telLink.getAttribute('href');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
