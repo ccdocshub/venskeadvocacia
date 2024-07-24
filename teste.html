@@ -36,14 +36,9 @@
             margin-top: 20px;
             width: 240px; /* Aumentar o tamanho do logotipo em 20% */
         }
-        .description {
-            font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+        .description-img {
             margin: 20px 0;
-            text-align: center; /* Centralizar texto */
-            line-height: 1.5; /* Ajustar espaçamento entre linhas */
-            max-width: 90%; /* Limitar a largura do texto */
-            word-break: break-word; /* Permitir quebra de palavras */
-            white-space: pre-line; /* Preservar quebras de linha */
+            width: calc(320px + 10%); /* Largura 10% maior que os botões */
         }
         .button {
             padding: 25px 40px; /* Tornar os botões mais "gordinhos" */
@@ -56,11 +51,10 @@
             margin: 10px;
             display: inline-flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* Alinhar itens à esquerda */
             width: calc(100% - 40px); /* Largura fixa para os botões com margem de segurança */
             max-width: 320px; /* Largura máxima para os botões */
             border: 2px solid #022648; /* Adicionar borda */
-            text-align: center; /* Garantir centralização do texto */
         }
         .button img {
             margin-right: 20px; /* Aumentar a distância entre o ícone e o texto */
@@ -74,10 +68,6 @@
         @media (min-width: 768px) {
             .logo {
                 width: 360px; /* Aumentar o tamanho do logotipo em 20% */
-            }
-            .description {
-                font-size: 18px; /* Ajustar o tamanho da descrição para telas maiores */
-                max-width: 100%; /* Ajustar a largura do texto para telas maiores */
             }
             .button {
                 font-size: 24px;
@@ -97,13 +87,7 @@
 <body>
     <div class="container">
         <img src="logo.png" alt="Venske Advocacia" class="logo">
-        <div class="description">
-            Na Venske Advocacia, inovamos para simplificar<br>
-            sua vida jurídica. Com um atendimento<br>
-            100% online, garantimos soluções rápidas,<br>
-            seguras e confiáveis, sempre comprometidos<br>
-            com a verdade e com o melhor para você.
-        </div>
+        <img src="description.png" alt="Descrição" class="description-img">
         <a href="https://wa.me/5512997359102" target="_blank" class="button whatsapp">
             <img src="whatsapp-icon.png" alt="WhatsApp"> Chame no WhatsApp
         </a>
