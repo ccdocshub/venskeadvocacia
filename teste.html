@@ -9,9 +9,9 @@
 
         body, html {
             margin: 0;
-            padding: 20px; /* Adicionar padding para bordas laterais */
-            width: calc(100% - 40px); /* Ajustar largura considerando o padding */
-            height: calc(100% - 40px); /* Ajustar altura considerando o padding */
+            padding: 0;
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -19,6 +19,7 @@
             color: #fff;
             font-family: 'Plus Jakarta Sans', sans-serif;
             text-align: center;
+            padding: 20px;
             box-sizing: border-box;
         }
         .container {
@@ -28,7 +29,7 @@
             padding: 20px;
             margin-top: 15px; /* Margem de segurança do topo */
             max-width: 500px; /* Largura máxima */
-            width: 100%; /* Ajustar à largura da tela */
+            width: calc(100% - 40px); /* Ajustar à largura da tela com bordas de segurança */
             box-sizing: border-box;
         }
         .logo {
@@ -63,11 +64,6 @@
             height: 36px;
         }
         @media (min-width: 768px) {
-            body, html {
-                padding: 20px 0; /* Remover padding lateral para telas maiores */
-                width: 100%; /* Ajustar largura para 100% */
-                height: 100%; /* Ajustar altura para 100% */
-            }
             .logo {
                 width: 360px; /* Aumentar o tamanho do logotipo em 20% */
             }
@@ -89,10 +85,11 @@
     <div class="container">
         <img src="logo.png" alt="Venske Advocacia" class="logo">
         <div class="description">
-            Na Venske Advocacia, inovamos para simplificar<br>
-            sua vida jurídica. Com um atendimento<br>
-            100% online, garantimos soluções rápidas,<br>
-            seguras e confiáveis, sempre comprometidos<br>
+            Na Venske Advocacia, inovamos<br>
+            para simplificar sua vida jurídica.<br>
+            Com um atendimento 100% online,<br>
+            garantimos soluções rápidas, seguras<br>
+            e confiáveis, sempre comprometidos<br>
             com a verdade e com o melhor para você.
         </div>
         <a href="https://wa.me/5512997359102" target="_blank" class="button">
