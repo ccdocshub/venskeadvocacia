@@ -20,6 +20,7 @@
             font-family: 'Plus Jakarta Sans', sans-serif;
             text-align: center;
             box-sizing: border-box;
+            overflow: hidden; /* Esconder overflow para evitar rolagem */
         }
         .container {
             display: flex;
@@ -29,6 +30,7 @@
             max-width: 500px; /* Largura máxima */
             padding-top: 30px; /* Margem de segurança do topo */
             box-sizing: border-box;
+            position: relative; /* Necessário para posicionar a imagem de fundo */
         }
         .logo {
             width: 100%;
@@ -45,6 +47,14 @@
             max-width: 320px; /* Largura máxima */
             margin: 10px 0; /* Margem entre os botões */
         }
+        .background-logo {
+            position: absolute;
+            bottom: -20%; /* Ajuste a posição vertical conforme necessário */
+            width: 100%;
+            max-width: 700px; /* Largura máxima da imagem de fundo */
+            opacity: 0.2; /* Transparência da imagem de fundo */
+            z-index: -1; /* Coloca a imagem atrás do conteúdo */
+        }
     </style>
 </head>
 <body>
@@ -60,6 +70,7 @@
         <a href="tel:+5512997359102">
             <img src="phone-button.png" alt="Ligue para Nós" class="button-img">
         </a>
+        <img src="background-logo.png" alt="Logo de Fundo" class="background-logo">
     </div>
 </body>
 </html>
