@@ -15,45 +15,54 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            background-color: #022648; /* Cor de fundo do PDF */
+            background-color: #022648;
             color: #fff;
             font-family: 'Plus Jakarta Sans', sans-serif;
             text-align: center;
             box-sizing: border-box;
-            overflow: hidden; /* Esconder overflow para evitar rolagem */
-            position: relative; /* Necessário para posicionar a imagem de fundo */
+            overflow: hidden;
         }
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 90%; /* Ajustar à largura da tela com bordas laterais */
-            max-width: 500px; /* Largura máxima */
-            padding-top: 30px; /* Margem de segurança do topo */
+            width: 90%;
+            max-width: 500px;
+            padding-top: 30px;
             box-sizing: border-box;
-            z-index: 2; /* Garantir que o conteúdo fique acima da imagem de fundo */
+            position: relative;
+            z-index: 1;
         }
         .logo {
             width: 100%;
-            max-width: 300px; /* Largura máxima */
-            margin-bottom: 20px; /* Distância entre o logo e a descrição */
+            max-width: 300px;
+            margin-bottom: 20px;
         }
         .description-img {
             width: 100%;
-            max-width: 320px; /* Largura máxima */
-            margin-bottom: 20px; /* Distância entre a descrição e o primeiro botão */
+            max-width: 320px;
+            margin-bottom: 20px;
         }
         .button-img {
             width: 100%;
-            max-width: 320px; /* Largura máxima */
-            margin: 10px 0; /* Margem entre os botões */
+            max-width: 320px;
+            margin: 10px 0;
         }
         .background-logo {
             position: absolute;
-            bottom: 0;
-            right: 0; /* Posicionar no canto direito */
-            width: 50%; /* Ajustar largura conforme necessário */
-            z-index: 1; /* Coloca a imagem atrás do conteúdo */
+            bottom: -50px;
+            right: -50px;
+            width: 800px;
+            height: auto;
+            opacity: 1;
+            z-index: 0;
+        }
+        @media (max-width: 768px) {
+            .background-logo {
+                bottom: -150px; /* Ajuste conforme necessário para celular */
+                right: -150px; /* Ajuste conforme necessário para celular */
+                width: 1000px; /* Ajuste conforme necessário para celular */
+            }
         }
     </style>
 </head>
@@ -71,6 +80,6 @@
             <img src="phone-button.png" alt="Ligue para Nós" class="button-img">
         </a>
     </div>
-    <img src="background-logo.png" alt="Logo de Fundo" class="background-logo">
+    <img src="background-logo.png" alt="Background Logo" class="background-logo">
 </body>
 </html>
