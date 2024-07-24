@@ -22,17 +22,30 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
+            position: relative;
         }
         iframe {
             width: 100vw;
             height: 100vh;
             border: none;
         }
+        .open-pdf {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #000;
+            color: #fff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            z-index: 1000; /* Ensure the button is above the iframe */
+        }
     </style>
 </head>
 <body>
     <div class="pdf-container">
-        <iframe src="https://drive.google.com/file/d/1jRMN_y-98YYHE79ooyEMjRtx2lfQnaeX/preview" allow="fullscreen"></iframe>
+        <iframe src="https://drive.google.com/file/d/1A2B3C4D5E6F7G8H9I0/preview?embedded=true" allow="fullscreen"></iframe>
+        <a href="https://drive.google.com/file/d/1A2B3C4D5E6F7G8H9I0/view" target="_blank" class="open-pdf">Abrir em nova aba</a>
     </div>
 </body>
 </html>
