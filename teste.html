@@ -50,8 +50,9 @@
         }
         .background-logo {
             position: absolute;
-            bottom: 10px; /* Ajuste a posição conforme necessário */
-            right: 10px; /* Ajuste a posição conforme necessário */
+            top: 50%; /* Alinha o topo do background-logo com o centro do botão WhatsApp */
+            left: 0; /* Alinha a lateral esquerda do background-logo com a lateral esquerda da descrição */
+            transform: translateY(-50%); /* Ajusta para que o topo esteja alinhado */
             width: 600px; /* Ajuste o tamanho conforme necessário */
             height: auto;
             opacity: 1;
@@ -59,8 +60,6 @@
         }
         @media (max-width: 768px) {
             .background-logo {
-                bottom: -100px; /* Ajuste conforme necessário para celular */
-                right: -100px; /* Ajuste conforme necessário para celular */
                 width: 600px; /* Ajuste conforme necessário para celular */
             }
         }
